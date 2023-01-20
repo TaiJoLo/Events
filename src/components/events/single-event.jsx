@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useRef, useState } from "react";
-import FetchButton from "../FetchButton/FetchButton";
 
 const SingleEvent = ({ data }) => {
   const inputEmail = useRef();
@@ -51,9 +50,7 @@ const SingleEvent = ({ data }) => {
           id="email"
           placeholder="Please insert your email here"
         />
-
         <button type="submit"> Submit</button>
-        <FetchButton />
       </form>
       <p>{message}</p>
     </div>

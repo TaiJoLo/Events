@@ -2,7 +2,7 @@ import path from "path";
 import fs from "fs";
 
 function buildPath() {
-  return path.join("/tmp/data.json");
+  return path.join(process.cwd(), "data", "data.json");
 }
 
 function extractData(filePath) {
