@@ -46,11 +46,12 @@ export default function handler(req, res) {
       }
       return ev;
     });
+    fs.writeFileSync("/tmp/data.json", JSON.stringify(data));
 
-    fs.writeFileSync(
-      filePath,
-      JSON.stringify({ events_categories, allEvents: newAllEvents })
-    );
+    // fs.writeFileSync(
+    //   filePath,
+    //   JSON.stringify({ events_categories, allEvents: newAllEvents })
+    // );
 
     res.status(201).json({
       message: `You have been registered successfully with the email: ${email} for the event: ${eventId}`,
